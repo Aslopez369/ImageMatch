@@ -1,0 +1,12 @@
+* text=auto
+
+# .bat 在仓库里直接存 CRLF 原样（-text 表示不做换行转换）。
+# 原因：cmd.exe 只认 CRLF，LF 换行的批处理会跳过 set /p 等输入停顿。
+# 这样无论 clone、下载 ZIP 还是 archive 导出，拿到的都是能直接双击的版本。
+*.bat -text
+*.cmd -text
+
+*.py  text eol=lf
+*.md  text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
